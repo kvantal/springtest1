@@ -10,7 +10,9 @@ public class TextSpring {
 
         Music music = context.getBean("musicBean", Music.class);
 
-        System.out.println(music.getSong());
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+
+        musicPlayer.playMusic();
 
         context.close();
     }
